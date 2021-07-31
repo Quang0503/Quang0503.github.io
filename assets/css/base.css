@@ -55,7 +55,7 @@ body {
     text-align: center;
 }
 .tranform {
-    transform: translate3d(-590px,0px,0px);
+    transform: translate3d(-600px,0px,0px);
 }
 .selltranform {
     transform: translate3d(-100%, 0, 0) !important;
