@@ -283,6 +283,17 @@
     color: var(--primary-color);
  }
 
+ .nav__menu-list-product {
+     overflow: hidden;
+ }
+
+ .nav__menu-wrap {
+     visibility: hidden;
+     opacity: 0;
+     margin-top: -300px;
+     transition: all 0.3s;
+ }
+
  .nav__menu-list-product-link {
      font-weight: 300;
      color: rgb(82, 82, 82) ;
@@ -778,19 +789,20 @@
 
 .best-seller__arrow{
     position: relative;
-    width: 100%;
-    top: -250px;
+    left: -50%;
 }
 .best-seller__arrow-left{
     font-size: 15px;
     position: absolute;
-    left: -2%;
+    left: -608px;
+    top: 100px;
     padding: 4px;
 }
 .best-seller__arrow-right{
     font-size: 15px;
     position: absolute;
-    right: -2%;
+    left: 608px;
+    top: 100px;
     padding: 4px;
 
 }
@@ -804,10 +816,7 @@
     text-decoration: none;
     position: relative;
 }
-.best-seller__product-img{
-    width: 100%;
-    position: relative;
-}
+
 .best-seller__product-img img {
     width: 100%;
     height: auto;
@@ -816,11 +825,11 @@
 }
 
 .best-seller__product-cart {
-    width: 100%;
+    width: 210px;
     height: 70px;
     position: absolute;
     top: 155px;
-    left: 0;
+    left: 15px;
     text-align: center;
     overflow: hidden;
 }
@@ -848,7 +857,7 @@
     line-height: 1.2;
     letter-spacing: 0.4px;
     position: absolute;
-    left: 0px;
+    left: 15px;
     top: 15px;
 }
 
@@ -1070,7 +1079,6 @@
 }
 
 .feedback__content-member-list{
-    width: 600px;
     overflow: hidden;
     height: 300px;
     cursor: pointer;
@@ -1079,7 +1087,6 @@
 .feedback__content-member-container{
     width: 1200px;
     transition: linear 0.5s;
-    display: flex;
 }
 
 .feedback__content-member{
@@ -1107,12 +1114,6 @@
 .feedback__content-customer:hover  .feedback__arrow-right-icon
 {
     transform: translateX(0);
-}
-
-.feedback__arrow{
-    position: relative;
-    left: -50%;
-    top: -128px;
 }
 
 .feedback__member-avatar img{
@@ -1151,7 +1152,7 @@
     color: rgba(255,255,255,0.8);
     position: absolute;
     top: 50%;
-    left: 42%;
+    left: 47%;
     overflow: hidden;
 }
 
@@ -1168,7 +1169,7 @@
     color: rgba(255,255,255,0.8);
     position: absolute;
     top: 51%;
-    right: -57%;
+    right: 15%;
     overflow: hidden;
 }
 
@@ -1271,9 +1272,16 @@
     background-color:rgba(245, 245, 245, 0.4);
     padding: 14px 20px;
     border: 1px solid rgb(241, 241, 241);
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -200px;
+    transition: all 0.3s;
 }
 
 
+.question-content__item-child ul {
+    padding: 0 25px;
+}
 .question-content__item-child ul li {
     padding: 5px 0;
 }
@@ -1287,9 +1295,7 @@
 }
 
 .ques-container{
-    height: 0;
     overflow: hidden;
-    transition: linear 0.5s;
 }
 
 /* End container */

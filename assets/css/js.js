@@ -22,69 +22,42 @@ function CloseNav (){
 }
 
 
+// navbar
+const iconRight = document.getElementById('menu_icon-right')
+const iconRightLike = document.getElementById('menu_icon-rightLike')
+const iconRightStyle = document.getElementById('menu_icon-rightStyle')
 
-var iconRight = document.querySelectorAll('.nav__menu-list-icon')
-var OpenProductList = document.querySelector('.nav__menu-list-product');
-
-for(var i =0; i <iconRight.length; i++){
+const OpenProductList = document.querySelector('.nav__menu-list-product')
+const bgIcon = document.getElementById('menu_icon-right')
+const DMSP = document.querySelector('.DMSP')
+const ST = document.querySelector('.ST')
+const PC = document.querySelector('.PC')
     
-    iconRight[0].onclick = function(){
-        var x = document.getElementById('product-list');
-        if (x.style.display === 'none') {
-            x.style.display = 'block';
-            document.getElementById('icon-right').style.transform= "rotateZ(90deg)";
-            document.getElementById('menu_icon-right').style.backgroundColor = "#e49d3b";
-            document.getElementById('icon-right').style.color = "#fff";
-            document.getElementById('icon-right').style.width = "51px";
-        } else {
-            x.style.display = 'none';
-            document.getElementById('icon-right').style.transform= "rotateZ(0)";
-            document.getElementById('menu_icon-right').style.backgroundColor = "#fff";
-            document.getElementById('icon-right').style.color = "#000";
-        }
+    iconRight.onclick = function(){
+            DMSP.classList.toggle('dropdown')
+            bgIcon.classList.toggle('bgIcon')
+            document.getElementById('icon-right').classList.toggle('dropdownIcon')
     }
 
-    iconRight[1].onclick = function(){
-        var x = document.getElementById('nav__menu-list-product');
-        if (x.style.display === 'none') {
-            x.style.display = 'block';
-            document.getElementById('icon-rightLike').style.transform= "rotateZ(90deg)";
-            document.getElementById('menu_icon-rightLike').style.backgroundColor = "#e49d3b";
-            document.getElementById('icon-rightLike').style.color = "#fff";
-            document.getElementById('icon-rightLike').style.width = "51px";  
-            
-        } else {
-            x.style.display = 'none';
-            document.getElementById('icon-rightLike').style.transform= "rotateZ(0)";
-            document.getElementById('menu_icon-rightLike').style.backgroundColor = "#fff";
-            document.getElementById('icon-rightLike').style.color = "#000";
-        }
+    iconRightLike.onclick = function(){
+        ST.classList.toggle('dropdown')
+        iconRightLike.classList.toggle('bgIcon')
+        document.getElementById('icon-rightLike').classList.toggle('dropdownIcon')
     }
 
-    iconRight[2].onclick = function(){
-        var x = document.getElementById('nav__menu-list-productStyle');
-        if (x.style.display === 'none') {
-            x.style.display = 'block';
-            document.getElementById('icon-rightStyle').style.transform= "rotateZ(90deg)";
-            document.getElementById('menu_icon-rightStyle').style.backgroundColor = "#e49d3b";
-            document.getElementById('icon-rightStyle').style.color = "#fff";
-            document.getElementById('icon-rightStyle').style.width = "51px";
-            
-        } else {
-            x.style.display = 'none';
-            document.getElementById('icon-rightStyle').style.transform= "rotateZ(0)";
-            document.getElementById('menu_icon-rightStyle').style.backgroundColor = "#fff";
-            document.getElementById('icon-rightStyle').style.color = "#000";
-          
-        }
+    iconRightStyle.onclick = function(){
+        PC.classList.toggle('dropdown')
+        iconRightStyle.classList.toggle('bgIcon')
+        document.getElementById('icon-rightStyle').classList.toggle('dropdownIcon')
     }
-}
+
+
 
 //best sell
 
-var bestSellLeft = document.querySelector('.best-seller__arrow-left')
-var bestSellRight = document.querySelector('.best-seller__arrow-right')
-var sellContainer = document.querySelector('.bestsell__product-container-list')
+const bestSellLeft = document.querySelector('.best-seller__arrow-left')
+const bestSellRight = document.querySelector('.best-seller__arrow-right')
+const sellContainer = document.querySelector('.bestsell__product-container-list')
 
 bestSellRight.onclick = function() {
     sellContainer.classList.toggle('selltranform')
@@ -114,12 +87,12 @@ function feedback_out() {
 
 
 
-var left = document.querySelector('.feedback__arrow-left');
-var right = document.querySelector('.feedback__arrow-right');
-var member =  document.querySelector('.feedback__content-member-container');
+const left = document.querySelector('.feedback__arrow-left');
+const right = document.querySelector('.feedback__arrow-right');
+const member =  document.querySelector('.feedback__content-member-container');
 
-var dot_1 = document.querySelector('.owl-dot1');
-var dot_2 = document.querySelector('.owl-dot2');
+const dot_1 = document.querySelector('.owl-dot1');
+const dot_2 = document.querySelector('.owl-dot2');
 
 
 
@@ -141,7 +114,7 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 const questionItems = $$('.question-content__item')
-const contentItems = $$('.ques-container')
+const contentItems = $$('.question-content__item-child')
 const iconsMinus = $$('.fa-minus')
 const iconsPlus = $$('.fa-plus')
 
@@ -152,12 +125,12 @@ questionItems.forEach((item, index) => {
 
     
     item.onclick = function(){
-        $('.ques-container.height').classList.remove('height')
+        $('.question-content__item-child.dropdown').classList.remove('dropdown')
         $('.fas.fa-minus.active').classList.remove('active')
        
-        content.classList.add('height')
+        content.classList.add('dropdown')
     
-        if(content.classList.contains('height')){
+        if(content.classList.contains('dropdown')){
             minus.classList.add('active')
         }
     }
@@ -165,7 +138,7 @@ questionItems.forEach((item, index) => {
 
 // timer countdow
 
-var fuT = new Date("Jul 31,2021 00:00:00").getTime()
+var fuT = new Date("Jul 31,2022 00:00:00").getTime()
 	setInterval(function(){
 
 		var now = new Date().getTime()
