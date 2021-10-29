@@ -829,7 +829,7 @@
     height: 70px;
     position: absolute;
     top: 155px;
-    left: 15px;
+    left: 0;
     text-align: center;
     overflow: hidden;
 }
@@ -857,7 +857,7 @@
     line-height: 1.2;
     letter-spacing: 0.4px;
     position: absolute;
-    left: 15px;
+    left: 0;
     top: 15px;
 }
 
