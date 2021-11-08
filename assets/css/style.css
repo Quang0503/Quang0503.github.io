@@ -1087,6 +1087,8 @@
 .feedback__content-member-container{
     width: 1200px;
     transition: linear 0.5s;
+    height: 260px;
+    overflow: hidden;
 }
 
 .feedback__content-member{
@@ -1358,7 +1360,7 @@
 }
 
 .footer-container {
-    background-image: url('https://holame.r.worldssl.net/wp-content/uploads/2021/05/about-us-main-photo-1.jpg?id=20178');
+    background-image: url('https://holame.net/wp-content/uploads/2021/05/about-us-main-photo-1.jpg?id=20178');
     text-align: center;
     padding: 35px 15px 10px 15px;
 }
