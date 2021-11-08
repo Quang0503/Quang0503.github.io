@@ -138,7 +138,7 @@ questionItems.forEach((item, index) => {
 
 // timer countdow
 
-var fuT = new Date("Jul 31,2022 00:00:00").getTime()
+var fuT = new Date("Feb 01,2022 00:00:00").getTime()
 	setInterval(function(){
 
 		var now = new Date().getTime()
